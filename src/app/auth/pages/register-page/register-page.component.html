@@ -1,0 +1,53 @@
+<form
+  class="login100-form"
+  autocomplete="off"
+  [formGroup]="myForm"
+  (ngSubmit)="register()"
+>
+  <span class="login100-form-title p-b-49">Login</span>
+
+  <div class="wrap-input100 m-b-23">
+    <span class="label-input100">Correo Electronico</span>
+    <input
+      class="input100"
+      formControlName="email"
+      type="email"
+      placeholder="Correo Electronico"
+    />
+    <span class="focus-input100"></span>
+  </div>
+
+  <div class="wrap-input100 m-b-23">
+    <span class="label-input100">Nombre</span>
+    <input
+      class="input100"
+      formControlName="name"
+      type="text"
+      placeholder="Ingrese su nombre"
+    />
+    <span class="focus-input100"></span>
+  </div>
+
+  <div class="wrap-input100 m-b-23">
+    <span class="label-input100">Contraseña</span>
+    <input
+      class="input100"
+      formControlName="password"
+      type="password"
+      placeholder="Ingrese su contraseña"
+    />
+  </div>
+
+  <div class="text-right p-t-8 p-b-31">
+    <div class="wrap-login100-form-btn">
+      <div class="login100-form-bgbtn"></div>
+      <button
+        class="login100-form-btn"
+        type="submit"
+        [disabled]="myForm.invalid"
+      >
+        Register
+      </button>
+    </div>
+  </div>
+</form>

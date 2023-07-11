@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "envs": "node ./scripts/set-envs.js",
+    "start": " npm run envs && ng serve -o",
+    "build": "npm run envs && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -18,7 +19,9 @@
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
+    "dotenv": "^16.3.1",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.7.16",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
